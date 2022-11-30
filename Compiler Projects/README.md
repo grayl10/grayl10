@@ -34,7 +34,9 @@
   **Assignment Statements**
     
   > *variable* **=** *math expression;*
+  
   with the following math expressions:
+  
   >     +           -
 
 
@@ -45,10 +47,9 @@
   **Mov dest, src**
   > The **MOV** command moves data from the source(**src**) to the destination(**dest**). The destination can be either memory locations or registers. The source can be a register, memory location, or an integer constant. Register-to-register moves are allowed, but direct memory-to-memory moves are not allowed.
   
-  **ADD dest, src**
+  **ADD dest, src** and **SUB dest, src**
 
-  **SUB dest, src**
-    > The **ADD** command adds src and dest and places the result in dest. Dest must be a register. Src can be an integer constant, register, or a memory location. The same rules apply for subtraction.
+  > The **ADD** command adds src and dest and places the result in dest. Dest must be a register. Src can be an integer constant, register, or a memory location. The same rules apply for subtraction.
   
   **JMP label**
     
@@ -56,7 +57,7 @@
   
   **CMP src**
     
-    The compare command set a flag inside the ALU that can then be used for conditional branching. The first argument of the comparison is hardwired to be R8. The source of the second argument is another register, a memory location, or an integer constant.
+  > The compare command set a flag inside the ALU that can then be used for conditional branching. The first argument of the comparison is hardwired to be R8. The source of the second argument is another register, a memory location, or an integer constant.
   
   **Branch Conditional Label**
     
