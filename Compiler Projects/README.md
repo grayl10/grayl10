@@ -3,45 +3,46 @@
 
   > The primary objective of this assignment   is give students experience with creating software using Regular Expressions and Context Free Grammars. While it is unlikely that students will create a compiler during their professional software development careers, the tools and algorithms learned from this project can be applied to a wide range of data formatting and data processing problems. This project will also increase students' general problem solving and programming skills.
 
-  > **Overview**    
-    The result of this project will be a partial compiler for a simple programming language. Your application will convert high level code into assembly level code. To keep the project manageable (completable), both the high level language and the assembly language will be psuedo-languages.
-    The project will be completed in stages. The first stage is to write regular expressions for Lex to use in creating a lexical anayzer. In other words, break a program into a series of tokens. The second phase is writing a grammar that can be used by YACC to create a parser. Once we can break the program into different types of statments, the third phase is to output assembly code.
+  **Overview**    
+  
+  >  The result of this project will be a partial compiler for a simple programming language. Your application will convert high level code into assembly level code. To keep the project manageable (completable), both the high level language and the assembly language will be psuedo-languages. The project will be completed in stages. The first stage is to write regular expressions for Lex to use in creating a lexical anayzer. In other words, break a program into a series of tokens. The second phase is writing a grammar that can be used by YACC to create a parser. Once we can break the program into different types of statments, the third phase is to output assembly code.
 
-  > **The High-Level Language**
-    Our pseudo-high-level language is somewhat similar to Pascal. It will not be a fully executable language. The language does not have input or output. It has no for loops, no multiplication, no comments. The only data type is integers, and variables are not declared (see project part four). The language will be case-sensative (using only small letters makes the regular expressions shorter).
-    It does have loops and decisions. Loops are done with while statements. Decisions can be either if-then or if-then-else statements.
+
+
+  **The High-Level Language**
+
+  > Our pseudo-high-level language is somewhat similar to Pascal. It will not be a fully executable language. The language does not have input or output. It has no for loops, no multiplication, no comments. The only data type is integers, and variables are not declared (see project part four). The language will be case-sensative (using only small letters makes the regular expressions shorter). It does have loops and decisions. Loops are done with while statements. Decisions can be either if-then or if-then-else statements.
   
    **Loops**
-
-      the following format:
-      **while** *conditions* **do** *statements* **endwhile;**
+  > following format:
+  **while** *conditions* **do** *statements* **endwhile;**
 
   **Decisions**
 
-      the following formats:
-      **if** *condition* **then** *statements* **endif;**
-      **if** *condition* **then** *statements* **else** *statements* **endif;**
+  > following formats:
+  **if** *condition* **then** *statements* **endif;**
+  **if** *condition* **then** *statements* **else** *statements* **endif;**
   
   **Conditions**
-      the following format:
-      *operand* *operator* *operand*
 
-      valid comparison operators in our language:
+  > the following format:
+  *operand* *operator* *operand*
+
+  valid comparison operators:
       <   <=    >   >=    <>    ==
     
   **Assignment Statements**
-      the following format:
-      *variable* **=** *math expression;*
+  > the following format:
+  *variable* **=** *math expression;*
 
-      valid math expressions in our language:
-        +   -
-
-
+  valid math expressions in our language:
+     +     -
 
 
-  > **The Assembly Language**
-    The assembly code created by your project will similar to 8086 Assembly. Since our high level language does not include IO, there is no need for the assembly language to include interupts for IO.
-    Our architecture has eight registers - R1, R2, R3, ...R8. Memory locations can be referenced by name.
+
+
+  **The Assembly Language**
+  > The assembly code created by your project will similar to 8086 Assembly. Since our high level language does not include IO, there is no need for the assembly language to include interupts for IO. Our architecture has eight registers - R1, R2, R3, ...R8. Memory locations can be referenced by name.
 
   **Mov dest, src**
     The **MOV** command moves data from the source(**src**) to the destination(**dest**). The destination can be either memory locations or registers. The source can be a register, memory location, or an integer constant. Register-to-register moves are allowed, but direct memory-to-memory moves are not allowed.
