@@ -67,30 +67,31 @@
       BGE - branch if R8 was greater than or equal to src
 
 
+
 ## Part 1
   Create a stand-alone Lex file that will convert code composed of our high-level language into a series of tokens. For example, given the input of the left, your Lexical Analyzer should create similar ouput to the block on the right.
 
-    > while a < b do                    WHILE
-                                        VAR
-                                        LT
-                                        VAR
-                                        DO
-        if foo == bar then              IF
-                                        VAR
-                                        EQ
-                                        VAR
-                                        THEN
-          bob = fred + 99;              VAR
-                                        ASSIGN
-                                        VAR
-                                        PLUS
-                                        NUM
-                                        SEMI
-                                        continue....
-        else
-          bob = 37;
-        endif;
-      endwhile;
+    while a < b do                    WHILE
+                                      VAR
+                                      LT
+                                      VAR
+                                      DO
+      if foo == bar then              IF
+                                      VAR
+                                      EQ
+                                      VAR
+                                      THEN
+        bob = fred + 99;              VAR
+                                      ASSIGN
+                                      VAR
+                                      PLUS
+                                      NUM
+                                      SEMI
+                                      continue....
+      else
+        bob = 37;
+      endif;
+    endwhile;
   
   We do not want the lexical analyzer to ignore unusual characteristics, such as ( or { or *. If it encounters an unknown character, then it needs to output a token. For example, output a **JUNK** token.
 
