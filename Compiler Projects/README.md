@@ -1,13 +1,9 @@
 # Compiler Project
-  **Objectives**
+**Objectives**
+  The primary objective of this assignment   is give students experience with creating software using Regular Expressions and Context Free Grammars. While it is unlikely that students will create a compiler during their professional software development careers, the tools and algorithms learned from this project can be applied to a wide range of data formatting and data processing problems. This project will also increase students' general problem solving and programming skills.
 
-  > The primary objective of this assignment   is give students experience with creating software using Regular Expressions and Context Free Grammars. While it is unlikely that students will create a compiler during their professional software development careers, the tools and algorithms learned from this project can be applied to a wide range of data formatting and data processing problems. This project will also increase students' general problem solving and programming skills.
-
-
-
-  **Overview**    
-  
-  >  The result of this project will be a partial compiler for a simple programming language. Your application will convert high level code into assembly level code. To keep the project manageable (completable), both the high level language and the assembly language will be psuedo-languages. The project will be completed in stages. The first stage is to write regular expressions for Lex to use in creating a lexical anayzer. In other words, break a program into a series of tokens. The second phase is writing a grammar that can be used by YACC to create a parser. Once we can break the program into different types of statments, the third phase is to output assembly code.
+**Overview**    
+  The result of this project will be a partial compiler for a simple programming language. Your application will convert high level code into assembly level code. To keep the project manageable (completable), both the high level language and the assembly language will be psuedo-languages. The project will be completed in stages. The first stage is to write regular expressions for Lex to use in creating a lexical anayzer. In other words, break a program into a series of tokens. The second phase is writing a grammar that can be used by YACC to create a parser. Once we can break the program into different types of statments, the third phase is to output assembly code.
 
 
 
@@ -37,7 +33,7 @@
   
   with the following math expressions:
 
-  > **+**    or       **-**
+  > **+** **-**
 
 
 
@@ -79,7 +75,7 @@
 
 
 
-## Part 1
+# Part 1
   Create a stand-alone Lex file that will convert code composed of our high-level language into a series of tokens. For example, given the input of the left, your Lexical Analyzer should create similar ouput to the block on the right.
 
     while a < b do                    WHILE
@@ -105,6 +101,31 @@
     endwhile;
   
   We do not want the lexical analyzer to ignore unusual characteristics, such as ( or { or *. If it encounters an unknown character, then it needs to output a token. For example, output a **JUNK** token.
+
+
+
+
+
+# Part 2
+  Now that we have tokens, lets check syntax so that we know the parser is doing something, output a notice for every valid statement. When your parser finds a syntax error, output an error message with a line number. Given the input on the left, your parser should output notices similar to those on the right.
+
+    while a < b do                          valid assignment
+      if foo > bar then                     valid assignment
+        bob = fred + 99;                    valid assignment
+      else                                  valid if then else
+      bob = 37;
+    endif;
+  endwhile;                                 valid while
+
+
+  **Suggestions:**
+
+  Your first task will be to get your previous Lex file to work with YACC. So, start by declaring all the tokens in your YACC file. Run "yacc -d" on that file to create y.tab.h . Change your lex file so that it includes that y.tab.h file and change your Lex file so that instead of "printf("IF\n");" it has "return IF;" .
+
+  Don't try to build the entire grammar at once. Build a grammar rule for simple assignments, like "bob = joe;" then see if you can build a rule to find multiple statements, like "bob = joe; fred = 99;". Then try to match complex math expressions like "a = b + 99;" and "a = b + c + d - 77;"
+
+  Once you can recognize multiple valid assignments, try while loops that have assignments inside the loop. I would save if-then and if-then-else for last.
+
 
 
 
