@@ -16,13 +16,14 @@
   Our **high-level language** is somewhat similar to Pascal. It will not be a fully executable language. The language does not have input or output. It has no for loops, no multiplication, no comments. The only data type is integers, and variables are not declared (see project part four). The language will be case-sensative (using only small letters makes the regular expressions shorter). It does have loops and decisions. Loops are done with while statements. Decisions can be either if-then or if-then-else statements.
 
   **Loops**
-  > following format:
+  
+  following format:
 
   > **while** *conditions* **do** *statements* **endwhile;**
 
   **Decisions**
 
-  > following formats:
+  following formats:
 
   > **if** *condition* **then** *statements* **endif;**
 
@@ -30,43 +31,47 @@
   
   **Conditions**
 
-  > the following format:
+  the following format:
 
   > *operand* *operator* *operand*
 
-  > valid comparison operators:
+  valid comparison operators:
     
-    <     <=      >     >=      <>      ==
+  >  <     <=      >     >=      <>      ==
     
   **Assignment Statements**
-  > the following format:
+  
+  the following format:
   
   > *variable* **=** *math expression;*
 
-  > valid math expressions in our language:
+  valid math expressions in our language:
     
-    +     -
+  >     +       -
 
 
 
-
-  **The Assembly Language**
-  > The assembly code created by your project will similar to 8086 Assembly. Since our high level language does not include IO, there is no need for the assembly language to include interupts for IO. Our architecture has eight registers - R1, R2, R3, ...R8. Memory locations can be referenced by name.
+### Assembly Language
+  The assembly code created by your project will similar to 8086 Assembly. Since our high level language does not include IO, there is no need for the assembly language to include interupts for IO. Our architecture has eight registers - R1, R2, R3, ...R8. Memory locations can be referenced by name.
 
   **Mov dest, src**
-    The **MOV** command moves data from the source(**src**) to the destination(**dest**). The destination can be either memory locations or registers. The source can be a register, memory location, or an integer constant. Register-to-register moves are allowed, but direct memory-to-memory moves are not allowed.
+  > The **MOV** command moves data from the source(**src**) to the destination(**dest**). The destination can be either memory locations or registers. The source can be a register, memory location, or an integer constant. Register-to-register moves are allowed, but direct memory-to-memory moves are not allowed.
   
   **ADD dest, src**
+
   **SUB dest, src**
-    The **ADD** command adds src and dest and places the result in dest. Dest must be a register. Src can be an integer constant, register, or a memory location. The same rules apply for subtraction.
+    > The **ADD** command adds src and dest and places the result in dest. Dest must be a register. Src can be an integer constant, register, or a memory location. The same rules apply for subtraction.
   
   **JMP label**
+    
     The jump command jumps unconditionally to label.
   
   **CMP src**
+    
     The compare command set a flag inside the ALU that can then be used for conditional branching. The first argument of the comparison is hardwired to be R8. The source of the second argument is another register, a memory location, or an integer constant.
   
   **Branch Conditional Label**
+    
     Immediately after using the CMP command, the assembly program can branch based on the result of that comparison.
 
     The following possible branch commands in our language:
