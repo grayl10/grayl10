@@ -116,7 +116,7 @@
       else                                  valid if then else
         bob = 37;
       endif;
-    endwhile;                                 valid while
+    endwhile;                               valid while
 
 
   **Suggestions:**
@@ -126,6 +126,32 @@
   Don't try to build the entire grammar at once. Build a grammar rule for simple assignments, like "bob = joe;" then see if you can build a rule to find multiple statements, like "bob = joe; fred = 99;". Then try to match complex math expressions like "a = b + 99;" and "a = b + c + d - 77;"
 
   Once you can recognize multiple valid assignments, try while loops that have assignments inside the loop. I would save if-then and if-then-else for last.
+
+
+# Part 3
+  Now that we can find valid assignment statments and valid loops, output assemby code that matches those statements.
+  I suggest you start with assignment statements. Take a statment like "a=b+c+d;" and draw the parse tree that your grammar creates for that input. Also, write out the assembly that matches that code. Then figure out how each branch of the parse tree matches the assembly. That tells you what each rule should output.
+  I thought while loops were easier to create than if-then or if-then-else. Once you figure out a template for while loops, then if-then should be similar. if-then-else was a bit of a pain.
+  Make sure your project can handle an if-then after another if-then. In other words, the labels you use for the first if-then should be different than the labels for the second if-then. Hint: use a counter.
+  You do NOT have to correctly create labels for nested if-then or nested while loops. You should still output valid assembly, but your labels might not be correct. (YACC has a way to do that, but it is beyond the scope of this project.)
+  Given the input on the left your project should create assembly code similar to that on the right.
+
+    total = 0;                                          MOV R1, 0
+                                                        MOV total, R1
+    fib = 5;                                            MOV R1, 5
+                                                        MOV fib, R1
+    while fib > 0 do                            wtop 1: MOV R8, fib
+                                                        MOV R7, 0
+                                                        CMP R7
+                                                        BLE end1
+      total = total + fib;                              MOVE R1, total
+                                                        ADD R1, fib
+                                                        MOV total, R1
+      fib = fib - 1;                                    MOV R1, fib
+                                                        SUB R1, 1
+                                                        MOV fib, R1
+                                                        JMP wtop1
+    endwhile;                                      end1:
 
 
 
