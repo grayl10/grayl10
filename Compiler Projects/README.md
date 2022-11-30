@@ -1,5 +1,6 @@
 # Compiler Project
 **Objectives**
+
   The primary objective of this assignment   is give students experience with creating software using Regular Expressions and Context Free Grammars. While it is unlikely that students will create a compiler during their professional software development careers, the tools and algorithms learned from this project can be applied to a wide range of data formatting and data processing problems. This project will also increase students' general problem solving and programming skills.
 
 **Overview**    
@@ -113,9 +114,9 @@
       if foo > bar then                     valid assignment
         bob = fred + 99;                    valid assignment
       else                                  valid if then else
-      bob = 37;
-    endif;
-  endwhile;                                 valid while
+        bob = 37;
+      endif;
+    endwhile;                                 valid while
 
 
   **Suggestions:**
