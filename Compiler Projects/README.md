@@ -17,8 +17,6 @@
 
   **Loops**
   
-  following format:
-
   > **while** *conditions* **do** *statements* **endwhile;**
 
   **Decisions**
