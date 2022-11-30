@@ -21,31 +21,21 @@
 
   **Decisions**
 
-  following formats:
-
   > **if** *condition* **then** *statements* **endif;**
 
   > **if** *condition* **then** *statements*  **else** *statements* **endif;**
   
   **Conditions**
 
-  the following format:
-
   > *operand* *operator* *operand*
-
-  valid comparison operators:
-    
-  >  <     <=      >     >=      <>      ==
+  with the following comparison operators
+  <     <=      >     >=      <>      ==
     
   **Assignment Statements**
-  
-  the following format:
-  
-  > *variable* **=** *math expression;*
-
-  valid math expressions in our language:
     
-  >     +       -
+  > *variable* **=** *math expression;*
+  with the following math expressions:
+  >     +           -
 
 
 
