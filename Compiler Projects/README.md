@@ -37,7 +37,7 @@
   
   with the following math expressions:
 
-  > **+**           **-**
+  > **+**    or       **-**
 
 
 
@@ -64,11 +64,17 @@
   > Immediately after using the CMP command, the assembly program can branch based on the result of that comparison.
 
    > The following possible branch commands in our language:
+   
     BEQ - branch if the operands of the comparioson were equal
+
     BNE - branch not equal
+
     BLT - branch if R8 was less than src
+
     BGT - branch if R8 was greater than src
+
     BLE - branch if R8 was less than or equal to src
+
     BGE - branch if R8 was greater than or equal to src
 
 
