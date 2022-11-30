@@ -35,9 +35,9 @@
     
   > *variable* **=** *math expression;*
   
-  with the following math expressions:
+  > with the following math expressions:
   
-  >     +           -
+  +       -
 
 
 
