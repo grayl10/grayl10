@@ -17,29 +17,35 @@
 
   **Loops**
   > following format:
-  **while** *conditions* **do** *statements* **endwhile;**
+
+  > **while** *conditions* **do** *statements* **endwhile;**
 
   **Decisions**
 
   > following formats:
-  **if** *condition* **then** *statements* **endif;**
+
+  > **if** *condition* **then** *statements* **endif;**
 
   > **if** *condition* **then** *statements*  **else** *statements* **endif;**
   
   **Conditions**
 
   > the following format:
-  *operand* *operator* *operand*
 
-  valid comparison operators:
-      <   <=    >   >=    <>    ==
+  > *operand* *operator* *operand*
+
+  > valid comparison operators:
+    
+    <     <=      >     >=      <>      ==
     
   **Assignment Statements**
   > the following format:
-  *variable* **=** *math expression;*
+  
+  > *variable* **=** *math expression;*
 
-  valid math expressions in our language:
-     +     -
+  > valid math expressions in our language:
+    
+    +     -
 
 
 
