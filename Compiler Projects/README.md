@@ -13,8 +13,8 @@
 
   
 ## High-Level Language
-  **High-Level Language**
-   Our pseudo-high-level language is somewhat similar to Pascal. It will not be a fully executable language. The language does not have input or output. It has no for loops, no multiplication, no comments. The only data type is integers, and variables are not declared (see project part four). The language will be case-sensative (using only small letters makes the regular expressions shorter). It does have loops and decisions. Loops are done with while statements. Decisions can be either if-then or if-then-else statements.
+  Our **high-level language** is somewhat similar to Pascal. It will not be a fully executable language. The language does not have input or output. It has no for loops, no multiplication, no comments. The only data type is integers, and variables are not declared (see project part four). The language will be case-sensative (using only small letters makes the regular expressions shorter). It does have loops and decisions. Loops are done with while statements. Decisions can be either if-then or if-then-else statements.
+
   **Loops**
   > following format:
   **while** *conditions* **do** *statements* **endwhile;**
@@ -23,7 +23,8 @@
 
   > following formats:
   **if** *condition* **then** *statements* **endif;**
-  **if** *condition* **then** *statements* **else** *statements* **endif;**
+
+  > **if** *condition* **then** *statements*  **else** *statements* **endif;**
   
   **Conditions**
 
