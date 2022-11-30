@@ -1,6 +1,7 @@
 # Compiler Project
-  > **Objectives**
-    The primary objective of this assignment is give students experience with creating software using Regular Expressions and Context Free Grammars. While it is unlikely that students will create a compiler during their professional software development careers, the tools and algorithms learned from this project can be applied to a wide range of data formatting and data processing problems. This project will also increase students' general problem solving and programming skills.
+  **Objectives**
+
+  > The primary objective of this assignment   is give students experience with creating software using Regular Expressions and Context Free Grammars. While it is unlikely that students will create a compiler during their professional software development careers, the tools and algorithms learned from this project can be applied to a wide range of data formatting and data processing problems. This project will also increase students' general problem solving and programming skills.
 
   > **Overview**    
     The result of this project will be a partial compiler for a simple programming language. Your application will convert high level code into assembly level code. To keep the project manageable (completable), both the high level language and the assembly language will be psuedo-languages.
